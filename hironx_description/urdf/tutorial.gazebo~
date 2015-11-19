@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<robot>
+	<!-- ros_control plugin -->
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/Tut</robotNamespace>
+      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+    </plugin>
+  </gazebo>
+
+	<!-- BOX_LINK -->
+  <gazebo reference="BOX_Link">
+    <material>Gazebo/Grey</material>
+    <self_collide>true</self_collide>
+  </gazebo>
+
+</robot>

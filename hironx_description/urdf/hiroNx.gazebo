@@ -1,0 +1,353 @@
+<?xml version="1.0"?>
+<robot>
+
+  <!-- ros_control plugin -->
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/hiroNx</robotNamespace>
+      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+    </plugin>
+  </gazebo>
+  
+  <!-- BOX_LINK -->
+  <gazebo reference="BOX_LINK">
+    <material>Gazebo/Grey</material>
+    <self_collide>true</self_collide>
+  </gazebo>
+  
+  <!-- WAIST -->
+  <gazebo reference="WAIST">
+    <material>Gazebo/Black</material>
+    <self_collide>true</self_collide>
+  </gazebo>
+  
+  <!-- CHEST_JOINT0_Link -->
+  <gazebo reference="CHEST_JOINT0_Link">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Red</material>
+    <self_collide>true</self_collide>
+  </gazebo>
+  
+  <gazebo reference="CHEST_JOINT0">
+    <dynamics damping="0.5" friction="10.0"/>
+  </gazebo>
+  
+  <!-- HEAD_JOINT0_Link -->
+  <gazebo reference="HEAD_JOINT0_Link">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>
+    <self_collide>true</self_collide>
+  </gazebo>
+  
+  <gazebo reference="HEAD_JOINT0">
+    <dynamics damping="0.4" friction="10.0"/>
+  </gazebo>
+  
+  <!-- HEAD_JOINT1_Link -->
+  <gazebo reference="HEAD_JOINT1_Link">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>
+    <self_collide>true</self_collide>
+  </gazebo>
+  
+  <gazebo reference="HEAD_JOINT1">
+    <dynamics damping="0.4" friction="10.0"/>
+  </gazebo>
+  
+  <gazebo reference="$HEAD_JOINT1">
+	<initial_joint_position>-1.0</initial_joint_position>
+  </gazebo>
+  
+  <gazebo reference="$HEAD_JOINT0">
+	<initial_joint_position>-1.0</initial_joint_position>
+  </gazebo>
+  
+  <!-- LARM_JOINT0_Link -->
+  <gazebo reference="LARM_JOINT0_Link">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Black</material>
+    <self_collide>true</self_collide>
+  </gazebo>
+  
+  <!-- <gazebo reference="LARM_JOINT0">
+    <dynamics damping="0.4" friction="10.0"/>
+  </gazebo> -->
+  
+  <!-- LARM_JOINT1_Link -->
+  <gazebo reference="LARM_JOINT1_Link">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Black</material>
+    <self_collide>true</self_collide>
+  </gazebo>
+  
+  <!-- <gazebo reference="LARM_JOINT1">
+    <dynamics damping="0.9" friction="100.0"/>
+  </gazebo> -->
+  
+  <!-- LARM_JOINT2_Link -->
+  <gazebo reference="LARM_JOINT2_Link">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Black</material>
+  </gazebo>
+  
+  <!-- <gazebo reference="LARM_JOINT2">
+    <dynamics damping="0.9" friction="100.0"/>
+  </gazebo> -->
+  
+  <!-- LARM_JOINT3_Link -->
+  <!-- <gazebo reference="LARM_JOINT3_Link">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Black</material>
+    <self_collide>true</self_collide>
+  </gazebo> -->
+  
+  <!-- <gazebo reference="LARM_JOINT3">
+    <dynamics damping="0.9" friction="100.0"/>
+  </gazebo> -->
+  
+  <!-- LARM_JOINT4_Link -->
+  <!-- <gazebo reference="LARM_JOINT4_Link">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Black</material>
+    <self_collide>true</self_collide>
+  </gazebo>
+  
+  <gazebo reference="LARM_JOINT4">
+    <dynamics damping="0.9" friction="100.0"/>
+  </gazebo> -->
+  
+  <!-- LARM_JOINT5_Link -->
+  <!-- <gazebo reference="LARM_JOINT5_Link">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Blue</material>
+    <self_collide>true</self_collide>
+  </gazebo>
+  
+  <gazebo reference="LARM_JOINT5">
+    <dynamics damping="0.0" friction="0.0"/>
+  </gazebo> -->
+  
+  <!-- LHAND_JOINT0_Link -->
+  <!-- <gazebo reference="LHAND_JOINT0_Link">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Yellow</material>
+    <self_collide>true</self_collide>
+  </gazebo>
+  
+  <gazebo reference="LHAND_JOINT0">
+    <dynamics damping="0.0" friction="0.0"/>
+  </gazebo> -->
+  
+  <!-- LHAND_JOINT1_Link -->
+  <!-- <gazebo reference="LHAND_JOINT1_Link">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Red</material>
+    <self_collide>true</self_collide>
+  </gazebo>
+  
+  <gazebo reference="LHAND_JOINT1">
+    <dynamics damping="0.0" friction="0.0"/>
+  </gazebo> -->
+  
+  <!-- LHAND_JOINT2_Link -->
+  <!-- <gazebo reference="LHAND_JOINT2_Link">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Yellow</material>
+    <self_collide>true</self_collide>
+  </gazebo>
+  
+  <gazebo reference="LHAND_JOINT2">
+    <dynamics damping="0.0" friction="0.0"/>
+  </gazebo> -->
+  
+  <!-- LHAND_JOINT3_Link -->
+  <!-- <gazebo reference="LHAND_JOINT3_Link">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Red</material>
+    <self_collide>true</self_collide>
+  </gazebo>
+  
+  <gazebo reference="LHAND_JOINT3">
+    <dynamics damping="0.0" friction="0.0"/>
+  </gazebo> -->
+  
+  <!-- RARM_JOINT0_Link -->
+  <gazebo reference="RARM_JOINT0_Link">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Black</material>
+    <self_collide>true</self_collide>
+  </gazebo>
+  
+  <!-- <gazebo reference="RARM_JOINT0">
+    <dynamics damping="0.4" friction="10.0"/>
+  </gazebo> -->
+  
+  <!-- RARM_JOINT1_Link -->
+  <gazebo reference="RARM_JOINT1_Link">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Black</material>
+    <self_collide>true</self_collide>
+  </gazebo>
+  
+  <!-- <gazebo reference="RARM_JOINT1">
+    <dynamics damping="0.0" friction="0.0"/>
+  </gazebo> -->
+  
+  <!-- RARM_JOINT2_Link -->
+  <gazebo reference="RARM_JOINT2_Link">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Black</material>
+    <self_collide>true</self_collide>
+  </gazebo>
+  
+  <!-- <gazebo reference="RARM_JOINT2">
+    <dynamics damping="0.0" friction="0.0"/>
+  </gazebo> -->
+  
+  <!-- RARM_JOINT3_Link -->
+  <gazebo reference="RARM_JOINT3_Link">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Black</material>
+    <self_collide>true</self_collide>
+  </gazebo>
+  
+  <!-- <gazebo reference="RARM_JOINT3">
+    <dynamics damping="0.0" friction="0.0"/>
+  </gazebo> -->
+  
+  <!-- RARM_JOINT4_Link -->
+  <!-- <gazebo reference="RARM_JOINT4_Link">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Black</material>
+    <self_collide>true</self_collide>
+  </gazebo>
+  
+  <gazebo reference="RARM_JOINT4">
+    <dynamics damping="0.0" friction="0.0"/>
+  </gazebo> -->
+  
+  <!-- RARM_JOINT5_Link -->
+  <!-- <gazebo reference="RARM_JOINT5_Link">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Blue</material>
+    <self_collide>true</self_collide>
+  </gazebo>
+  
+  <gazebo reference="RARM_JOINT5">
+    <dynamics damping="0.0" friction="0.0"/>
+  </gazebo> -->
+  
+  <!-- RHAND_JOINT0_Link -->
+  <!-- <gazebo reference="RHAND_JOINT0_Link">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Yellow</material>
+    <self_collide>true</self_collide>
+  </gazebo>
+  
+  <gazebo reference="RHAND_JOINT0">
+    <dynamics damping="0.0" friction="0.0"/>
+  </gazebo> -->
+  
+  <!-- RHAND_JOINT1_Link -->
+  <!-- <gazebo reference="RHAND_JOINT1_Link">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Red</material>
+    <self_collide>true</self_collide>
+  </gazebo>
+  
+  <gazebo reference="RHAND_JOINT1">
+    <dynamics damping="0.0" friction="0.0"/>
+  </gazebo> -->
+  
+  <!-- RHAND_JOINT2_Link -->
+  <!-- <gazebo reference="RHAND_JOINT2_Link">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Yellow</material>
+    <self_collide>true</self_collide>
+  </gazebo>
+  
+  <gazebo reference="RHAND_JOINT3">
+    <dynamics damping="0.0" friction="0.0"/>
+  </gazebo> -->
+  
+  <!-- RHAND_JOINT3_Link -->
+  <!-- <gazebo reference="RHAND_JOINT3_Link">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Red</material>
+    <self_collide>true</self_collide>
+  </gazebo>
+  
+  <gazebo reference="RHAND_JOINT3">
+    <dynamics damping="0.0" friction="0.0"/>
+  </gazebo> -->
+  
+  <!-- Kinect -->
+  
+  <!-- <gazebo reference="kinect_link">
+    <sensor type="depth" name="openni_camera_camera">       
+        <always_on>1</always_on>
+        <visualize>true</visualize>             
+        <camera>
+            <horizontal_fov>1.047</horizontal_fov> 
+            <image>
+                <width>640</width>
+                <height>480</height>
+                <format>R8G8B8</format>
+            </image>
+            <depth_camera>
+
+            </depth_camera>
+            <clip>
+                <near>0.1</near>
+                <far>100</far>
+            </clip>
+        </camera>
+        <plugin name="camera_controller" filename="libgazebo_ros_openni_kinect.so">
+            <alwaysOn>true</alwaysOn>
+                <updateRate>10.0</updateRate>
+                <cameraName>hiroNx/kinect</cameraName>
+                <frameName>kinect_link</frameName>                   
+            <imageTopicName>rgb/image_raw</imageTopicName>
+            <depthImageTopicName>depth/image_raw</depthImageTopicName>
+            <pointCloudTopicName>depth/points</pointCloudTopicName>
+            <cameraInfoTopicName>rgb/camera_info</cameraInfoTopicName>              
+            <depthImageCameraInfoTopicName>depth/camera_info</depthImageCameraInfoTopicName>            
+            <pointCloudCutoff>0.4</pointCloudCutoff>                
+                <hackBaseline>0.07</hackBaseline>
+                <distortionK1>0.0</distortionK1>
+                <distortionK2>0.0</distortionK2>
+                <distortionK3>0.0</distortionK3>
+                <distortionT1>0.0</distortionT1>
+                <distortionT2>0.0</distortionT2>
+            <CxPrime>0.0</CxPrime>
+            <Cx>0.0</Cx>
+            <Cy>0.0</Cy>
+            <focalLength>0.0</focalLength>
+            </plugin>
+    </sensor>
+  </gazebo> -->
+  
+</robot>

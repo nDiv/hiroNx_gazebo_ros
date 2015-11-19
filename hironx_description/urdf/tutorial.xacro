@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<robot name="Tut" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Import all Gazebo-customization elements, including Gazebo colors -->
+  <xacro:include filename="$(find hironx_description)/urdf/tutorial.gazebo" />
+
+	<!-- used for fixing robot to Gazebo 'base_link' -->
+	<link name="world"/>
+
+	<joint name="box_joint" type="fixed">
+    <parent link="world"/>
+    <child link="BOX_Link"/>
+    <origin xyz="0 0 0.3" rpy="0 0 0"/>
+  </joint>
+	
+	<link name="BOX_Link">
+	  <visual>
+		  <origin xyz="0 0 0.0" rpy="0 0 0"/>
+		  <geometry>
+			  <box size="0.2 0.2 0.6"/>
+		  </geometry>
+		  <material name="black"/>
+	  </visual>
+	  <!--
+	  <collision>
+		  <geometry>
+			  <box size="0.2 0.2 0.6"/>
+		  </geometry>
+	  </collision>
+	  -->
+	  <interial>
+		  <!-- <origin xyz="0 0 0" rpy="0 0 4.35"/> -->
+		  <mass value="2"/>
+		  <inertia
+				ixx="1.0" ixy="0.0" ixz="0.0"
+				iyy="1.0" iyz="0.0"
+				izz="1.0"/>
+	  </interial>
+  </link>
+
+<!-- Kinect-->
+  <link name="kinect_link">
+   <!-- <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+		<box size="0.1 0.2 0.05"/>
+      </geometry>
+    </collision> -->
+
+   <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+		<box size="0.1 0.2 0.05"/>
+      </geometry>
+      <material name="red"/>
+    </visual> 
+
+  <!--  <inertial>
+      <mass value="0" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial> -->
+  </link>
+
+	<joint name="kinect_joint" type="fixed">
+   <!-- <axis xyz="0 1 0" /> -->
+    <origin xyz="0.05 0 0.08" rpy="0 0 0"/>
+    <parent link="world"/>
+    <child link="kinect_link"/>
+  </joint>
+
+</robot>
